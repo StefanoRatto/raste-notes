@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>CIS_Cisco_IOS_16_Benchmark_v1.1.0 PDF.pdf</string>
+  <key>nodeid</key><string>ab43dcce-861e-42e9-b3a9-a791ee07acbd</string>
+  <key>modified_time</key><integer>1600051997</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>cis_cisco_ios_16_benchmark_v1.1.0 pdf.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1600051997</integer>
+  <key>order</key><integer>3</integer>
+</dict>
+</node>

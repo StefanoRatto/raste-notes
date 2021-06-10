@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>windows_to_unix_cheatsheet.pdf</string>
+  <key>nodeid</key><string>f61a3b7f-bd2a-4064-af1f-840aa0003a0f</string>
+  <key>modified_time</key><integer>1604029902</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>windows_to_unix_cheatsheet.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1604029902</integer>
+  <key>order</key><integer>35</integer>
+</dict>
+</node>

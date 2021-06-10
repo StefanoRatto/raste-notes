@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>ATT&amp;CK 101. This post was originally published May… _ by Blake Strom _ MITRE ATT&amp;CK® _ Medium.pdf</string>
+  <key>nodeid</key><string>8f6f993e-f28c-48e7-9904-c95f20e23491</string>
+  <key>modified_time</key><integer>1600052346</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>attck 101. this post was originally pub.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1600052346</integer>
+  <key>order</key><integer>0</integer>
+</dict>
+</node>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>mitre-getting-started-with-attack-october-2019.pdf</string>
+  <key>nodeid</key><string>7bf4f2c6-4efa-49cc-9897-6f0aa3d19fbf</string>
+  <key>modified_time</key><integer>1600052347</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>mitre-getting-started-with-attack-octobe.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1600052347</integer>
+  <key>order</key><integer>5</integer>
+</dict>
+</node>

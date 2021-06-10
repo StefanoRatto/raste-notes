@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>FOR518_APFS_CheatSheet_012020.pdf</string>
+  <key>nodeid</key><string>0c6a3e4d-a92c-4bdf-9663-858bf303962f</string>
+  <key>modified_time</key><integer>1604029883</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>for518_apfs_cheatsheet_012020.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1604029883</integer>
+  <key>order</key><integer>5</integer>
+</dict>
+</node>

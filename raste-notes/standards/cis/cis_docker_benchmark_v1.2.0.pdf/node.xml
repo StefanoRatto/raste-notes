@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>CIS_Docker_Benchmark_v1.2.0.pdf</string>
+  <key>nodeid</key><string>b0981652-9ed5-41a8-8cef-a71ea340f412</string>
+  <key>modified_time</key><integer>1600051997</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>cis_docker_benchmark_v1.2.0.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1600051997</integer>
+  <key>order</key><integer>5</integer>
+</dict>
+</node>

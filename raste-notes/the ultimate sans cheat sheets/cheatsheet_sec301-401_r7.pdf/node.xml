@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>Cheatsheet_SEC301-401_R7.pdf</string>
+  <key>nodeid</key><string>928d41c8-9d06-41b4-830d-65488b3d837c</string>
+  <key>modified_time</key><integer>1604029883</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>cheatsheet_sec301-401_r7.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1604029883</integer>
+  <key>order</key><integer>2</integer>
+</dict>
+</node>

@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Privilege escalation</title>
+</head><body>Direct-to-root compromises are rare in modern environments<br/>
+There are some common vectors to privilege escalation:<ul><li style="list-style-type: none">Misconfigured services</li>
+<li style="list-style-type: none">Insufficient file permissions</li>
+<li style="list-style-type: none">Kernel vulnerabilities</li>
+<li style="list-style-type: none">Vulnerable software running with high privileges</li>
+</ul>
+Information gathering:<ul><li style="list-style-type: none">Manual enumeration:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Enumerating users (potential targets for escalation of privileges): </li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Linux: whoami, id, /etc/passwd</li>
+<li style="list-style-type: none">Windows: whoami, net user username, net user</li>
+</ul>
+</li>
+<li style="list-style-type: none">Enumerating the hostname (can give clues about the function of themachine/server):</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Linux: hostname</li>
+<li style="list-style-type: none">Windows: hostname</li>
+</ul>
+</li>
+<li style="list-style-type: none">Enumerating the operating system version and architecture:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Linux: /etc/issue, /etc/*-release, uname -a</li>
+<li style="list-style-type: none">Windows: systeminfo</li>
+</ul>
+</li>
+<li style="list-style-type: none">Enumerating running processes and sevices:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Linux: ps aux</li>
+<li style="list-style-type: none">Windows: tasklist /SVC</li>
+</ul>
+</li>
+<li style="list-style-type: none">Enumerating networking information:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Linux: ifconfig a, ip a, cat /sbin/route, netstat -anp, ss -anp</li>
+<li style="list-style-type: none">Windows: ipconfig /all, route print, netstat -ano</li>
+</ul>
+</li>
+<li style="list-style-type: none">Enumerating firewall status and rules:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Linux: grep -Hs iptables /etc/*</li>
+<li style="list-style-type: none">Windows: netsh advfirewall show currentprofile, netsh advfirewall show rule name=all</li>
+</ul>
+</li>
+<li style="list-style-type: none">Enumerating scheduled tasks:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Linux: ls -lah /etc/cron*</li>
+<li style="list-style-type: none">Windows: schtasks /quey /fo LIST /v</li>
+</ul>
+</li>
+<li style="list-style-type: none">Enumerating installed applications and patch levels:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Linux: dpkg -l</li>
+<li style="list-style-type: none">Windows: wmic product get name, version, vendor, wmic qfe get Caption, Description, HotFixID, InstalledOn</li>
+</ul>
+</li>
+<li style="list-style-type: none">Enumerating readable/writable directories and files:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Linux: </li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">To list all the directories writable by yhe current user: find / -writable -type 2&gt;/dev/null</li>
+</ul>
+</li>
+<li style="list-style-type: none">Windows: </li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">We can use and external tool uploaded to the victim machine: c:\Tools\privilege_escalation\SysinternalsSuite\accesschk.exe -uws "Everyone" "C:\Program Files"</li>
+<li style="list-style-type: none">Or we can use PowerShell if transferring tool from the attacker is not possible: Get-ChildItem "C:\Program Files" -Recurse | Get-ACL | ?($_.AccessToString -match "Everyone\sAllow\s\Smodify")</li>
+</ul>
+</li>
+</ul>
+</li>
+<li style="list-style-type: none">Enumerating unmounted disks:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Linux: mount, cat /etc/fstab, /bin/lsblk</li>
+<li style="list-style-type: none">Windows: mountvol</li>
+</ul>
+</li>
+<li style="list-style-type: none">Enumerating device drivers and lernel modules:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Linux: lsmod, /sbin/modinfo blabla</li>
+<li style="list-style-type: none">Windows:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">From within PowerShell: driverquery.exe /v /fo csv | ConvertFrom-CSV | Select-Object 'Display Name', 'Start Mode', Path</li>
+<li style="list-style-type: none">To get the version of the drivers/kernel modules: Get-WmiObject Win32_PnPSignefDriver | Select-Object DeviceName, DriverVersion, manufactrer | Where-Objet {$_.DeviceName -like "*VMware*"}</li>
+</ul>
+</li>
+</ul>
+</li>
+<li style="list-style-type: none">Enumerating binaries that autoelevate:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Linux: we can search for suid files. If a binary is owned by root and the suid bit is set, anybody can execute that binary as root:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">find / -perm -u=s -type f 2&gt;/dev/null</li>
+</ul>
+</li>
+<li style="list-style-type: none">Windows: if these values are "1", then any user can run Windows installer packages with elevated privileges and we can craft a msi file to elevate our privileges:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">reg query HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Installer</li>
+<li style="list-style-type: none">reg query HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Installer</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li style="list-style-type: none">Automated enumeration:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Linux: ./unix-privesccheck standard &gt; output.check</li>
+<li style="list-style-type: none">Windows: c:\Tools\privilege_escalation\windows-privesc-checkmaster\windows-privesc-check2.exe -h</li>
+</ul>
+</li>
+</ul>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body></html>

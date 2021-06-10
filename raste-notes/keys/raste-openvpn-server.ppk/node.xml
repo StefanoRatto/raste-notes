@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>raste-openvpn-server.ppk</string>
+  <key>nodeid</key><string>8703336c-da3b-47d5-89e0-a4ba3cf58af9</string>
+  <key>modified_time</key><integer>1595453211</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>raste-openvpn-server.ppk</string>
+  <key>content_type</key><string>application/octet-stream</string>
+  <key>created_time</key><integer>1595453211</integer>
+  <key>order</key><integer>3</integer>
+</dict>
+</node>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>analyzing-malicious-document-files.pdf</string>
+  <key>nodeid</key><string>c6191ddc-7ace-4160-b8ad-f4e474411e6d</string>
+  <key>modified_time</key><integer>1604029882</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>analyzing-malicious-document-files.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1604029882</integer>
+  <key>order</key><integer>1</integer>
+</dict>
+</node>

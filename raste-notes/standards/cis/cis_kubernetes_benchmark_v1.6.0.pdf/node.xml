@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>CIS_Kubernetes_Benchmark_v1.6.0.pdf</string>
+  <key>nodeid</key><string>e91233a6-9e6d-4bd3-a6d4-fe2f696a0388</string>
+  <key>modified_time</key><integer>1600051999</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>cis_kubernetes_benchmark_v1.6.0.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1600051999</integer>
+  <key>order</key><integer>8</integer>
+</dict>
+</node>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>attack_roadmap_2020.pdf</string>
+  <key>nodeid</key><string>2b8f4b84-dd4c-4157-be1f-d943fe6e037c</string>
+  <key>modified_time</key><integer>1600052347</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>attack_roadmap_2020.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1600052347</integer>
+  <key>order</key><integer>3</integer>
+</dict>
+</node>

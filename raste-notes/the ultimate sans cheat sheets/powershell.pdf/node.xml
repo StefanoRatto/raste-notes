@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>PowerShell.pdf</string>
+  <key>nodeid</key><string>9e098235-5f26-401c-8d78-7833f34e18ff</string>
+  <key>modified_time</key><integer>1604029899</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>powershell.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1604029899</integer>
+  <key>order</key><integer>19</integer>
+</dict>
+</node>

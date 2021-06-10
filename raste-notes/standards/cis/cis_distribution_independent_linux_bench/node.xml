@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>CIS_Distribution_Independent_Linux_Benchmark_v2.0.0.pdf</string>
+  <key>nodeid</key><string>e2c7d0c8-34c8-46b8-8d96-866702399dbf</string>
+  <key>modified_time</key><integer>1600051997</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>cis_distribution_independent_linux_bench.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1600051997</integer>
+  <key>order</key><integer>4</integer>
+</dict>
+</node>

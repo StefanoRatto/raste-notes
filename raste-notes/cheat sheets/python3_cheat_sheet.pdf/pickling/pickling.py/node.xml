@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>pickling.py</string>
+  <key>nodeid</key><string>75d2b7d4-d431-48db-a266-f59feb311f4c</string>
+  <key>modified_time</key><integer>1597982141</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>pickling.py</string>
+  <key>content_type</key><string>text/x-python</string>
+  <key>created_time</key><integer>1597982141</integer>
+  <key>order</key><integer>0</integer>
+</dict>
+</node>

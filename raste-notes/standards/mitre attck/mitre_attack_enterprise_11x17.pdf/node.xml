@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>MITRE_ATTACK_Enterprise_11x17.pdf</string>
+  <key>nodeid</key><string>239a8cab-5d45-4ef2-bdf5-29125841146b</string>
+  <key>modified_time</key><integer>1600052347</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>mitre_attack_enterprise_11x17.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1600052347</integer>
+  <key>order</key><integer>4</integer>
+</dict>
+</node>

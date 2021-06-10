@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>Network_Threat_Hunting-Active_Countermeasures.pdf</string>
+  <key>payload_filename</key><string>networkthreathunting-activecountermeasur.pdf</string>
+  <key>nodeid</key><string>36ed8232-f8be-4bd9-a3ab-dc58e307365a</string>
+  <key>modified_time</key><integer>1614639194</integer>
+  <key>order</key><integer>4</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1614639194</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

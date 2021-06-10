@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>cable-bouquet.jpg</string>
+  <key>nodeid</key><string>af31805f-9e47-4a4e-93da-1e8e985b9c95</string>
+  <key>modified_time</key><integer>1595741003</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>cable-bouquet.jpg</string>
+  <key>content_type</key><string>image/jpeg</string>
+  <key>created_time</key><integer>1595741003</integer>
+  <key>order</key><integer>0</integer>
+</dict>
+</node>

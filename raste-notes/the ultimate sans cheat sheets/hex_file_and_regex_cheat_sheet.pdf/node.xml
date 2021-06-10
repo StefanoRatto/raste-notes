@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>hex_file_and_regex_cheat_sheet.pdf</string>
+  <key>nodeid</key><string>09c1f52a-8b5c-49cd-84d3-395d556f61f9</string>
+  <key>modified_time</key><integer>1604029884</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>hex_file_and_regex_cheat_sheet.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1604029884</integer>
+  <key>order</key><integer>10</integer>
+</dict>
+</node>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>CIS_Apple_iOS_13_and_iPadOS_13_Benchmark_v1.0.0.pdf</string>
+  <key>nodeid</key><string>80827322-62c5-46be-ae38-872d651a0980</string>
+  <key>modified_time</key><integer>1600051996</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>cis_apple_ios_13_and_ipados_13_benchmark.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1600051996</integer>
+  <key>order</key><integer>1</integer>
+</dict>
+</node>

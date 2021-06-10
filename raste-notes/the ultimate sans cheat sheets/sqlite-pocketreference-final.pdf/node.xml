@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>SQlite-PocketReference-final.pdf</string>
+  <key>nodeid</key><string>c9fb9a50-4dbc-4ef8-8352-ec75e8472324</string>
+  <key>modified_time</key><integer>1604029902</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>sqlite-pocketreference-final.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1604029902</integer>
+  <key>order</key><integer>31</integer>
+</dict>
+</node>

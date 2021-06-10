@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Red teaming logging</title>
+</head><body>Install screen:<ul><li style="list-style-type: none">sudo apt install screen</li>
+</ul>
+Create and edit .screenrc:<ul><li style="list-style-type: none">defshell -bash</li>
+<li style="list-style-type: none">startup_message off</li>
+<li style="list-style-type: none">multiuser on</li>
+<li style="list-style-type: none">defscrollback 10000</li>
+<li style="list-style-type: none">logfile /home/$USER/screenlogs/$USER-screenlog.%H.%n.%Y%m%d-%0c:%s.%t.log</li>
+<li style="list-style-type: none">logfile flush 5</li>
+<li style="list-style-type: none">logtstamp on</li>
+<li style="list-style-type: none">deflog on</li>
+<li style="list-style-type: none">defmonitor on</li>
+<li style="list-style-type: none">caption always "%{= gk}%-Lw%{= bW}%50&gt; %n%f* %t %{-}%+Lw%&lt; %= %{= rk} %H %l %{= gk} %0c:%s %{-}"</li>
+<li style="list-style-type: none">defutf8 on</li>
+<li style="list-style-type: none">activity "Activity in %t(%n)"</li>
+</ul>
+Add to .bashrc:<ul><li style="list-style-type: none">PS1='[`date &nbsp;+"%d-%b-%y %T"`]\[\033[01;31m\] `ifconfig ens33 2&gt;/dev/null | sed -n 2,2p | cut -d" " -f 10`\[\033[00m\] \[\033[01;34m\]\W\[\033[00m\] &gt; '</li>
+</ul>
+Create logs folder: <ul><li style="list-style-type: none">mkdir /home/$USER/screenlogs</li>
+</ul>
+Run screen: <ul><li style="list-style-type: none">screen</li>
+</ul>
+</body></html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>CIS_Google_Cloud_Platform_Foundation_Benchmark_v1.1.0.pdf</string>
+  <key>nodeid</key><string>5d351191-43e5-4ee7-9af3-87d3440349f2</string>
+  <key>modified_time</key><integer>1600051998</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>cis_google_cloud_platform_foundation_ben.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1600051998</integer>
+  <key>order</key><integer>7</integer>
+</dict>
+</node>

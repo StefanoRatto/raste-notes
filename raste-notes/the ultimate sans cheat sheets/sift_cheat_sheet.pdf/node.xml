@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>sift_cheat_sheet.pdf</string>
+  <key>nodeid</key><string>a4e16db9-2e41-426a-a696-8b1b7bab3016</string>
+  <key>modified_time</key><integer>1604029901</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>sift_cheat_sheet.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1604029901</integer>
+  <key>order</key><integer>29</integer>
+</dict>
+</node>

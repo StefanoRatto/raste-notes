@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>zeek_cheat_sheet.pdf</string>
+  <key>payload_filename</key><string>zeek_cheat_sheet.pdf</string>
+  <key>nodeid</key><string>95f1b39c-5f14-4f33-bbf3-f9a9f4dd64c7</string>
+  <key>modified_time</key><integer>1610259595</integer>
+  <key>order</key><integer>3</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1610259595</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

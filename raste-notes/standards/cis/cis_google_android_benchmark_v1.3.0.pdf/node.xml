@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>CIS_Google_Android_Benchmark_v1.3.0.pdf</string>
+  <key>nodeid</key><string>0bfbdc42-f68b-4fbd-a900-ae11584e307e</string>
+  <key>modified_time</key><integer>1600051998</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>cis_google_android_benchmark_v1.3.0.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1600051998</integer>
+  <key>order</key><integer>6</integer>
+</dict>
+</node>

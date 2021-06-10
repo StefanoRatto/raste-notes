@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>Purple Team Exercise Framework.pdf</string>
+  <key>nodeid</key><string>e70da0e2-af1e-49ae-bb0e-dfce8f0f0f20</string>
+  <key>modified_time</key><integer>1615908246</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>purple team exercise framework.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1615908246</integer>
+  <key>order</key><integer>6</integer>
+</dict>
+</node>

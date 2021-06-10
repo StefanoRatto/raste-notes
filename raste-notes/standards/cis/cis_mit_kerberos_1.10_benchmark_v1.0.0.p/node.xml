@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>CIS_MIT_Kerberos_1.10_Benchmark_v1.0.0.pdf</string>
+  <key>nodeid</key><string>a704177d-a91a-4981-86a9-892c40102541</string>
+  <key>modified_time</key><integer>1600052000</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>cis_mit_kerberos_1.10_benchmark_v1.0.0.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1600052000</integer>
+  <key>order</key><integer>12</integer>
+</dict>
+</node>

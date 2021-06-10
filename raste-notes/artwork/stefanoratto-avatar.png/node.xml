@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>StefanoRatto-AVATAR.PNG</string>
+  <key>nodeid</key><string>14b729db-8ab4-469e-8596-b79e23ece9c0</string>
+  <key>modified_time</key><integer>1595741133</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>stefanoratto-avatar.PNG</string>
+  <key>content_type</key><string>image/png</string>
+  <key>created_time</key><integer>1595741133</integer>
+  <key>order</key><integer>5</integer>
+</dict>
+</node>

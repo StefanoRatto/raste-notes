@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>Cloudformation vs. Terraform</string>
+  <key>nodeid</key><string>78f19e12-ede9-43f1-8e08-534ba317a6be</string>
+  <key>modified_time</key><integer>1595658396</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1595656893</integer>
+  <key>order</key><integer>5</integer>
+</dict>
+</node>

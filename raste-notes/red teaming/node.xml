@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>expanded</key><false/>
+  <key>nodeid</key><string>01ef1453-10cb-4a45-a37e-3d57a0d458e2</string>
+  <key>modified_time</key><integer>1597171619</integer>
+  <key>expanded2</key><false/>
+  <key>content_type</key><string>application/x-notebook-dir</string>
+  <key>created_time</key><integer>1597171619</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>title</key><string>Red Teaming</string>
+  <key>version</key><integer>6</integer>
+  <key>order</key><integer>5</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

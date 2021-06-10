@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>CIS_Apple_macOS_10.15_Benchmark_v1.0.0.pdf</string>
+  <key>nodeid</key><string>663681da-07cd-485e-966a-955d87e4249c</string>
+  <key>modified_time</key><integer>1600051996</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>cis_apple_macos_10.15_benchmark_v1.0.0.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1600051996</integer>
+  <key>order</key><integer>2</integer>
+</dict>
+</node>

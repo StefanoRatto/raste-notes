@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>hello_world</title>
+</head><body>raste@raste-dev-01:~/Desktop$ locate unistd_32.h<br/>
+<br/>
+raste@raste-dev-01:~/Desktop$ more /usr/include/x86_64-linux-gnu/asm/unistd_32.h<br/>
+<br/>
+raste@raste-dev-01:~/Desktop$ man 2 write<br/>
+<br/>
+raste@raste-dev-01:~/Desktop$ nano hello_world.asm<ul><li style="list-style-type: none">; hello_world.asm</li>
+<li style="list-style-type: none">;</li>
+<li style="list-style-type: none">; Author: &nbsp; &nbsp; &nbsp; raste</li>
+<li style="list-style-type: none">; Date: &nbsp; &nbsp; &nbsp; &nbsp; 12-Aug-2020</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">global _start:</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">section .text:</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">_start:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">mov eax, 0x4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#09;; use the write syscall</li>
+<li style="list-style-type: none">mov ebx, 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#09;&#09;; use stdout as the fd</li>
+<li style="list-style-type: none">mov ecx, message &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#09;; use the message as the buffer</li>
+<li style="list-style-type: none">mov edx, message_lenght &nbsp; &nbsp; &nbsp; &nbsp; &#09;; and supply the lenght</li>
+<li style="list-style-type: none">int 0x80&#09;&#09;&#09;&#09;&#09;; invoke the syscall</li>
+</ul>
+</li>
+</ul>
+</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none">mov eax, 0x1&#09;&#09;&#09;&#09;; now gracefully exit</li>
+<li style="list-style-type: none">mov ebx, 0</li>
+<li style="list-style-type: none">int 0x80</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul><li style="list-style-type: none">section .data:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">message: db "Hello world!", 0xA</li>
+<li style="list-style-type: none">message_lenght equ $-message</li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+</ul>
+raste@raste-dev-01:~/Desktop$ nasm -f elf32 -o hello_world.o hello_world.asm <br/>
+<br/>
+raste@raste-dev-01:~/Desktop$ ld -m elf_i386 -o hello_world hello_world.o <br/>
+<br/>
+raste@raste-dev-01:~/Desktop$ ./hello_world<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body></html>

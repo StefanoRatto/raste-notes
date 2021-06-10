@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>Microsoft Windows Security Architecture.pdf</string>
+  <key>nodeid</key><string>ed9b2624-cd2d-4ce0-bd84-06e9034ba19b</string>
+  <key>modified_time</key><integer>1621569474</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>microsoft windows security architecture.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1621569474</integer>
+  <key>order</key><integer>8</integer>
+</dict>
+</node>

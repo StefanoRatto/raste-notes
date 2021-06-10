@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>new-product-management-tips.pdf</string>
+  <key>nodeid</key><string>de8d9cfc-62d6-472e-bf43-bddcaf105906</string>
+  <key>modified_time</key><integer>1604029899</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>new-product-management-tips.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1604029899</integer>
+  <key>order</key><integer>16</integer>
+</dict>
+</node>

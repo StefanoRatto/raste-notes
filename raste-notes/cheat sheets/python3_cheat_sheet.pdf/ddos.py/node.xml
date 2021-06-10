@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>ddos.py</string>
+  <key>nodeid</key><string>7f9de4c1-a575-434f-9e2c-68841ff1984b</string>
+  <key>modified_time</key><integer>1597041727</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>ddos.py</string>
+  <key>content_type</key><string>text/x-python</string>
+  <key>created_time</key><integer>1597041727</integer>
+  <key>order</key><integer>0</integer>
+</dict>
+</node>

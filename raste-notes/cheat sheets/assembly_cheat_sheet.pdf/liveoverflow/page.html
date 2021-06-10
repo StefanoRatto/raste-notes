@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>LiveOverflow</title>
+</head><body>How a CPU works and Introduction to Assembler - bin 0x04: <a href="https://www.youtube.com/watch?v=6jSKldt7Eqs">https://www.youtube.com/watch?v=6jSKldt7Eqs</a>&nbsp; <br/>
+Reversing and Cracking first simple Program - bin 0x05: <a href="https://www.youtube.com/watch?v=VroEiMOJPm8">https://www.youtube.com/watch?v=VroEiMOJPm8</a><ul><li style="list-style-type: none">GNU Debugger:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">raste@raste-dev-01:~$ gdb "filename"</li>
+</ul>
+</li>
+<li style="list-style-type: none">Tools to display the control flow:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Hopper: https://www.hopperapp.com/ &nbsp;</li>
+<li style="list-style-type: none">IDA: https://www.hex-rays.com/products/ida/ &nbsp;</li>
+<li style="list-style-type: none">radare2: https://github.com/radare/radare2 &nbsp;</li>
+</ul>
+</li>
+</ul>
+Simple Tools and Techniques for Reversing a binary - bin 0x06: <a href="https://www.youtube.com/watch?v=3NTXFUxcKPc">https://www.youtube.com/watch?v=3NTXFUxcKPc</a><ul><li style="list-style-type: none">Show file info:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">raste@raste-dev-01:~$ file "filename"</li>
+</ul>
+</li>
+<li style="list-style-type: none">Show memory dump:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">raste@raste-dev-01:~$ hexdump -C "filename"</li>
+</ul>
+</li>
+<li style="list-style-type: none">Show strings in the binary:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">raste@raste-dev-01:~$ strings "filename"</li>
+</ul>
+</li>
+<li style="list-style-type: none">Decompiler, show the code:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">raste@raste-dev-01:~$ objdump -d "filename"</li>
+</ul>
+</li>
+<li style="list-style-type: none">Decompiler, show the headers:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">raste@raste-dev-01:~$ objdump -x "filename"</li>
+</ul>
+</li>
+<li style="list-style-type: none">Show syscalls:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">raste@raste-dev-01:~$ strace "filename"</li>
+</ul>
+</li>
+<li style="list-style-type: none">Show libraries used by the binary:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">raste@raste-dev-01:~$ ltrace -d "filename"</li>
+</ul>
+</li>
+</ul>
+</body></html>

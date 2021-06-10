@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>EricZimmermanCommandLineToolsCheatSheet-v1.0.pdf</string>
+  <key>nodeid</key><string>ff289783-d746-4df8-8bb3-6b5898c68330</string>
+  <key>modified_time</key><integer>1604029883</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>ericzimmermancommandlinetoolscheatsheet-.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1604029883</integer>
+  <key>order</key><integer>4</integer>
+</dict>
+</node>

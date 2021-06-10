@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>CIS_Microsoft_Windows_10_Enterprise_Release_1909_Benchmark_v1.8.1.pdf</string>
+  <key>nodeid</key><string>b1819d3b-9bc2-4f27-8c70-c26f0b580bf4</string>
+  <key>modified_time</key><integer>1600051999</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>cis_microsoft_windows_10_enterprise_rele.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1600051999</integer>
+  <key>order</key><integer>10</integer>
+</dict>
+</node>

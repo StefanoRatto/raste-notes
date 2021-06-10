@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>IMG_6437.JPG</string>
+  <key>nodeid</key><string>93b2018a-0ac5-4643-9c08-7359d161a0a4</string>
+  <key>modified_time</key><integer>1595741132</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>img_6437.JPG</string>
+  <key>content_type</key><string>image/jpeg</string>
+  <key>created_time</key><integer>1595741132</integer>
+  <key>order</key><integer>2</integer>
+</dict>
+</node>

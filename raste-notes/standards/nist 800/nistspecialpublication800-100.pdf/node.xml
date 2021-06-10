@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>nistspecialpublication800-100.pdf</string>
+  <key>nodeid</key><string>f4de73bc-b60e-428a-b9fb-a21e28caae24</string>
+  <key>modified_time</key><integer>1600052843</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>nistspecialpublication800-100.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1600052843</integer>
+  <key>order</key><integer>2</integer>
+</dict>
+</node>

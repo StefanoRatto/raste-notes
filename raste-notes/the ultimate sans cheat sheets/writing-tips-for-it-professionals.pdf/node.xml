@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>writing-tips-for-it-professionals.pdf</string>
+  <key>nodeid</key><string>dec70848-55fd-4344-b031-90f9cd2f4796</string>
+  <key>modified_time</key><integer>1604029903</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>writing-tips-for-it-professionals.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1604029903</integer>
+  <key>order</key><integer>37</integer>
+</dict>
+</node>

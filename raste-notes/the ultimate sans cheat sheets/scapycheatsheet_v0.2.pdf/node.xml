@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>ScapyCheatSheet_v0.2.pdf</string>
+  <key>nodeid</key><string>8fd6d495-0f9f-4f3d-ad16-760aa4427cfd</string>
+  <key>modified_time</key><integer>1604029900</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>scapycheatsheet_v0.2.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1604029900</integer>
+  <key>order</key><integer>24</integer>
+</dict>
+</node>

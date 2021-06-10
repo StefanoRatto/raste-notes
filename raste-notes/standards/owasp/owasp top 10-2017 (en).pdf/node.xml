@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>OWASP Top 10-2017 (en).pdf</string>
+  <key>nodeid</key><string>1cbf55d9-bae0-4456-bfba-67a685111ea9</string>
+  <key>modified_time</key><integer>1600053257</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>owasp top 10-2017 (en).pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1600053257</integer>
+  <key>order</key><integer>1</integer>
+</dict>
+</node>

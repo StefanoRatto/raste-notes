@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>CIS_Amazon_Web_Services_Foundations_Benchmark_v1.3.0.pdf</string>
+  <key>nodeid</key><string>7f6b3309-8871-41c1-92e6-2a19d2708bd0</string>
+  <key>modified_time</key><integer>1600051995</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>cis_amazon_web_services_foundations_benc.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1600051995</integer>
+  <key>order</key><integer>0</integer>
+</dict>
+</node>

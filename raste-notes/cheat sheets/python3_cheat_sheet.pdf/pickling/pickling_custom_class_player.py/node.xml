@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>pickling_custom_class_player.py</string>
+  <key>nodeid</key><string>c40b8db0-0f52-4b7d-a9fb-fd4a80de4911</string>
+  <key>modified_time</key><integer>1597982141</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>pickling_custom_class_player.py</string>
+  <key>content_type</key><string>text/x-python</string>
+  <key>created_time</key><integer>1597982141</integer>
+  <key>order</key><integer>1</integer>
+</dict>
+</node>

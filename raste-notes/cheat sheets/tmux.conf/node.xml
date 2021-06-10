@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>tmux.conf</string>
+  <key>nodeid</key><string>965a1576-8141-4017-8f9f-d3a5a618362f</string>
+  <key>modified_time</key><integer>1618028573</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>tmux.conf</string>
+  <key>content_type</key><string>application/octet-stream</string>
+  <key>created_time</key><integer>1618028573</integer>
+  <key>order</key><integer>10</integer>
+</dict>
+</node>

